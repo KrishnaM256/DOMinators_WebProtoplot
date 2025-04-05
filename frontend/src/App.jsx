@@ -8,6 +8,7 @@ import Login from './components/auth/login/Login'
 import LandingPage from './components/LandingPage'
 import Register from './components/auth/register/Register'
 import TrackActivities from './components/TrackActivities'
+import RecipeSearch from './components/RecipeSearch'
 function App() {
   return (
     <ThemeProvider>
@@ -21,6 +22,7 @@ function App() {
               <Route path="/Landing" element={<LandingPage />} />
               <Route path="/register" element={<Register />} />
               <Route path="/activities" element={<TrackActivities />} />
+              <Route path="/RecipeSearch" element={<RecipeSearch />} />
             </Routes>
           </main>
           <Footer />
