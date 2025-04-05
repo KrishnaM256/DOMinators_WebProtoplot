@@ -7,6 +7,8 @@ import { ThemeProvider } from './context/ThemeContext'
 import Login from './components/auth/login/Login'
 import LandingPage from './components/LandingPage'
 import RecipeSearch from './components/RecipeSearch'
+import HealthGame from './components/HealthGame'
+import WellnessQuest from './components/WellnessQuest'
 function App() {
   return (
     <ThemeProvider>
@@ -19,6 +21,8 @@ function App() {
               <Route path="/" element={<Home />} />
               <Route path="/Landing" element={<LandingPage />} />
               <Route path="/RecipeSearch" element={<RecipeSearch />} />
+              <Route path="/HealthGame" element={<HealthGame />} />
+              <Route path="/WellnessQuest" element={<WellnessQuest />} />
             </Routes>
           </main>
           <Footer />
