@@ -13,6 +13,8 @@ import HealthGame from './components/HealthGame'
 import WellnessQuest from './components/WellnessQuest'
 import ChatBot from './components/ChatBot'
 import MotivationalNotifier from './components/MotivationalNotifier'
+import { ToastContainer } from 'react-toastify' // <-- Add this import with other imports
+import 'react-toastify/dist/ReactToastify.css' // <-- Also add the CSS import
 
 function App() {
   return (
@@ -20,7 +22,6 @@ function App() {
       <BrowserRouter>
         <div className="flex flex-col min-h-screen">
           <Navbar />
-          <MotivationalNotifier />
           <main className="flex-grow">
             <Routes>
               <Route path="/login" element={<Login />} />
@@ -36,6 +37,7 @@ function App() {
             </Routes>
           </main>
           <Footer />
+          <ToastContainer />
         </div>
       </BrowserRouter>
     </ThemeProvider>
