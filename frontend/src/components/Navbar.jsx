@@ -23,10 +23,10 @@ const Navbar = () => {
 
   const navItems = [
     { name: 'Home', link: '/' },
-    { name: 'Dashboard', link: '/dashboard' },
     { name: 'Nutrition', link: '/nutrition' },
     { name: 'Activities', link: '/activities' },
-    { name: 'Community', link: '/community' },
+    { name: 'Games', link: '/games' },
+    { name: 'Ai Help', link: '/Ai_Help' },
   ]
   const navigate = useNavigate()
 
@@ -44,7 +44,7 @@ const Navbar = () => {
   return (
     <nav className="w-full bg-white shadow-md sticky top-0 z-50 dark:bg-gray-900">
       <div className="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
-        <div className="flex items-center">
+        <div className="flex items-center" onClick={() => navigate('/')}>
           <FiHeart className="text-3xl mr-2 text-pink-600 dark:text-pink-400" />
           <span className="text-2xl font-bold text-gray-800 dark:text-white">
             BeFit

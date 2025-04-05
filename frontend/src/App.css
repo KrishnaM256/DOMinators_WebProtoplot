@@ -1,3 +1,31 @@
-.quote{
-    background-color: red;
+.quote {
+  background-color: red;
+}
+
+.dark {
+  background-color: #111827; /* Dark background */
+  color: #e5e7eb; /* Light text */
+}
+
+.dark * {
+  color: inherit;
+}
+
+/* If you want to apply specific styles */
+.dark .bg-light {
+  background-color: #1f2937; /* Darker shade */
+}
+
+.dark .text-dark {
+  color: #f9fafb; /* Lighter text */
+}
+
+/* Button styles */
+.dark .btn {
+  background-color: #374151; /* Dark gray */
+  color: #f3f4f6; /* Lighter text */
+}
+
+.dark .btn:hover {
+  background-color: #4b5563; /* Slightly lighter dark gray */
 }

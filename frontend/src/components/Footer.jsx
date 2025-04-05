@@ -8,11 +8,11 @@ const Footer = () => {
           <div className="flex items-center mb-4 md:mb-0">
             <FiHeart className="text-2xl mr-2 text-pink-600 dark:text-pink-400" />
             <span className="font-bold text-gray-800 dark:text-white">
-              VitalTrack
+              BeFit
             </span>
           </div>
           <div className="text-sm text-gray-600 dark:text-gray-400 mb-4 md:mb-0">
-            © 2023 VitalTrack. All rights reserved.
+            © 2025 BeFit. All rights reserved.
           </div>
           <div className="flex space-x-6">
             <a

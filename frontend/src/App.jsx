@@ -11,12 +11,16 @@ import TrackActivities from './components/TrackActivities'
 import RecipeSearch from './components/RecipeSearch'
 import HealthGame from './components/HealthGame'
 import WellnessQuest from './components/WellnessQuest'
+import ChatBot from './components/ChatBot'
+import MotivationalNotifier from './components/MotivationalNotifier'
+
 function App() {
   return (
     <ThemeProvider>
       <BrowserRouter>
         <div className="flex flex-col min-h-screen">
           <Navbar />
+          <MotivationalNotifier />
           <main className="flex-grow">
             <Routes>
               <Route path="/login" element={<Login />} />
@@ -27,7 +31,8 @@ function App() {
               <Route path="/nutrition" element={<RecipeSearch />} />
               <Route path="/RecipeSearch" element={<RecipeSearch />} />
               <Route path="/HealthGame" element={<HealthGame />} />
-              <Route path="/WellnessQuest" element={<WellnessQuest />} />
+              <Route path="/games" element={<WellnessQuest />} />
+              <Route path="/Ai_Help" element={<ChatBot />} />
             </Routes>
           </main>
           <Footer />

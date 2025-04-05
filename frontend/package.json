@@ -17,10 +17,7 @@
     "@mui/material": "^7.0.1",
     "@reduxjs/toolkit": "^2.6.1",
     "@tailwindcss/vite": "^4.1.2",
-<<<<<<< HEAD
-=======
     "date-fns": "^4.1.0",
->>>>>>> 5a97e4e95d06be7b351375ed53bf701e1deb78af
     "framer-motion": "^12.6.3",
     "gsap": "^3.12.7",
     "lucide-react": "^0.487.0",

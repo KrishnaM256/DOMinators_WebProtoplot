@@ -1,4 +1,50 @@
 @import 'tailwindcss';
 
-@custom-variant dark (&:where(.dark, .dark *));
+@custom-variant dark (&:where(.dark, .dark *)); /* Ensures dark mode applies globally */
 
+/* 🌙 Dark Mode Styles */
+.dark {
+  /* Background Colors */
+  --tw-bg-opacity: 1;
+  background-color: rgb(17 24 39 / var(--tw-bg-opacity)); /* bg-gray-900 */
+
+  /* Text Colors */
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity)); /* text-white */
+}
+
+/* Dark Mode for Specific Components */
+.dark .dark\:bg-gray-900 {
+  background-color: #111827; /* Dark background */
+}
+.dark .dark\:bg-gray-800 {
+  background-color: #1f2937;
+}
+.dark .dark\:bg-gray-700 {
+  background-color: #374151;
+}
+.dark .dark\:bg-gray-600 {
+  background-color: #4b5563;
+}
+.dark .dark\:text-white {
+  color: #ffffff;
+}
+.dark .dark\:text-gray-400 {
+  color: #9ca3af;
+}
+.dark .dark\:text-gray-300 {
+  color: #d1d5db;
+}
+
+/* Button and Card Enhancements */
+.dark .dark\:hover\:bg-gray-600:hover {
+  background-color: #4b5563;
+}
+.dark .dark\:hover\:bg-gray-700:hover {
+  background-color: #374151;
+}
+
+/* Shadow Improvements */
+.dark .dark\:shadow-xl {
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.6);
+}
