@@ -1,70 +1,43 @@
-import { Facebook, Instagram, Twitter, Linkedin } from 'lucide-react'
+import { FiHeart } from 'react-icons/fi'
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-100 text-gray-800 py-8 mt-10">
-      <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
-        {/* Logo & Description */}
-        <div>
-          <h2 className="text-2xl font-bold text-blue-600 mb-2">MySite</h2>
-          <p className="text-sm text-gray-600">
-            Building the web, one page at a time. 🚀
-          </p>
-        </div>
-
-        {/* Quick Links */}
-        <div>
-          <h3 className="font-semibold mb-2">Quick Links</h3>
-          <ul className="space-y-2 text-sm">
-            <li>
-              <a href="/" className="hover:text-blue-600">
-                Home
-              </a>
-            </li>
-            <li>
-              <a href="/about" className="hover:text-blue-600">
-                About
-              </a>
-            </li>
-            <li>
-              <a href="/projects" className="hover:text-blue-600">
-                Projects
-              </a>
-            </li>
-            <li>
-              <a href="/contact" className="hover:text-blue-600">
-                Contact
-              </a>
-            </li>
-          </ul>
-        </div>
-
-        {/* Social Media */}
-        <div>
-          <h3 className="font-semibold mb-2">Follow Us</h3>
-          <div className="flex gap-4 mt-2">
-            <a href="#">
-              <Facebook size={20} />
+    <footer className="py-8 border-t border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900">
+      <div className="container mx-auto px-4">
+        <div className="flex flex-col md:flex-row justify-between items-center">
+          <div className="flex items-center mb-4 md:mb-0">
+            <FiHeart className="text-2xl mr-2 text-pink-600 dark:text-pink-400" />
+            <span className="font-bold text-gray-800 dark:text-white">
+              VitalTrack
+            </span>
+          </div>
+          <div className="text-sm text-gray-600 dark:text-gray-400 mb-4 md:mb-0">
+            © 2023 VitalTrack. All rights reserved.
+          </div>
+          <div className="flex space-x-6">
+            <a
+              href="#"
+              className="text-gray-600 hover:text-pink-600 dark:text-gray-400 dark:hover:text-pink-400 transition-colors"
+            >
+              Terms
             </a>
-            <a href="#">
-              <Instagram size={20} />
+            <a
+              href="#"
+              className="text-gray-600 hover:text-pink-600 dark:text-gray-400 dark:hover:text-pink-400 transition-colors"
+            >
+              Privacy
             </a>
-            <a href="#">
-              <Twitter size={20} />
-            </a>
-            <a href="#">
-              <Linkedin size={20} />
+            <a
+              href="#"
+              className="text-gray-600 hover:text-pink-600 dark:text-gray-400 dark:hover:text-pink-400 transition-colors"
+            >
+              Contact
             </a>
           </div>
         </div>
-      </div>
-
-      <div className="mt-8 border-t pt-4 text-center text-sm text-gray-500">
-        © {new Date().getFullYear()} MySite. All rights reserved.
       </div>
     </footer>
   )
 }
 
 export default Footer
-9
