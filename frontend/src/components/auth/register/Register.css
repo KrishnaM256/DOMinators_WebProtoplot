@@ -1,0 +1,143 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 820px;
+}
+
+.formDiv {
+  background-color: rgb(239, 239, 238);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 30rem;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2);
+  border-radius: 1rem;
+}
+
+.divContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-evenly;
+}
+
+.slideUp {
+  margin: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  border-bottom: 1px solid black;
+}
+
+.slideUp input {
+  position: relative;
+  font-size: 1.2rem;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  padding: 10px;
+  color: rgb(56, 56, 56);
+}
+
+.slideUp label {
+  color: rgb(56, 56, 56);
+  position: absolute;
+  pointer-events: none;
+  left: 2.15rem;
+  transition: all 0.3s;
+}
+
+.slideUp input:focus ~ label,
+.slideUp input:valid ~ label {
+  transform: translateY(-1.4rem);
+}
+
+.select {
+  display: flex;
+  flex-direction: column;
+  margin-left: 1rem;
+  margin-top: 1rem;
+}
+
+.selectField {
+  padding: 0.2rem 1rem;
+  border: 1px solid rgb(56, 56, 56);
+}
+
+.navigatePage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem 0;
+}
+
+.btn {
+  padding: 0.5rem 1.5rem;
+  cursor: pointer;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  outline: none;
+  margin: 0 1rem;
+  border-radius: 0.3rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+}
+
+.btn:hover {
+  background-color: #555;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.btn:active {
+  background-color: #111;
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.subBtn {
+  background-color: #28a745;
+}
+.navigatePage a {
+  text-decoration: none;
+}
+
+.subBtn:hover {
+  background-color: #218838;
+}
+
+.subBtn:active {
+  background-color: #1e7e34;
+}
+
+.btn svg {
+  margin: 0 0.5rem;
+  font-size: 1.2rem;
+}
+
+.link {
+  width: 65%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 1rem;
+}
+
+.link a {
+  text-decoration: none;
+  color: #555;
+}
+
+.link a:hover {
+  text-decoration: underline;
+}
