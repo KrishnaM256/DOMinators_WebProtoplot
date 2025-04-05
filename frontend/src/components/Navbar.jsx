@@ -8,10 +8,15 @@ import {
   FiUser,
 } from 'react-icons/fi'
 import DarkModeToggler from './DarkModeToggler'
+import { useDispatch, useSelector } from 'react-redux'
+import { useNavigate } from 'react-router-dom'
+import { useLogoutMutation } from '../redux/api/usersApiSlice'
+import { logout } from '../redux/features/auth/authSlice'
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false)
-
+  const { userInfo } = useSelector((state) => state.auth)
+  console.log(userInfo)
   const toggleMenu = () => {
     setMenuOpen(!menuOpen)
   }
@@ -23,14 +28,26 @@ const Navbar = () => {
     { name: 'Activities', link: '/activities' },
     { name: 'Community', link: '/community' },
   ]
+  const navigate = useNavigate()
 
+  const dispatch = useDispatch()
+  const [logoutApiCall] = useLogoutMutation()
+  const handleLogout = async () => {
+    try {
+      await logoutApiCall().unwrap()
+      dispatch(logout())
+      navigate('/login')
+    } catch (error) {
+      console.error(error)
+    }
+  }
   return (
     <nav className="w-full bg-white shadow-md sticky top-0 z-50 dark:bg-gray-900">
       <div className="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
         <div className="flex items-center">
           <FiHeart className="text-3xl mr-2 text-pink-600 dark:text-pink-400" />
           <span className="text-2xl font-bold text-gray-800 dark:text-white">
-            VitalTrack
+            BeFit
           </span>
         </div>
 
@@ -46,9 +63,21 @@ const Navbar = () => {
             </a>
           ))}
           <DarkModeToggler />
-          <button className="px-4 py-2 rounded-full font-medium bg-pink-500 hover:bg-pink-600 dark:bg-pink-600 dark:hover:bg-pink-700 text-white transition-colors">
-            Sign In
-          </button>
+          {userInfo ? (
+            <button
+              onClick={handleLogout}
+              className="px-4 py-2 rounded-full font-medium bg-pink-500 hover:bg-pink-600 dark:bg-pink-600 dark:hover:bg-pink-700 text-white transition-colors"
+            >
+              BeFit Sign Out
+            </button>
+          ) : (
+            <button
+              className="px-4 py-2 rounded-full font-medium bg-pink-500 hover:bg-pink-600 dark:bg-pink-600 dark:hover:bg-pink-700 text-white transition-colors"
+              onClick={() => navigate('/login')}
+            >
+              Sign In
+            </button>
+          )}
         </div>
 
         {/* Mobile Menu Button */}
