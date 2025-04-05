@@ -29,6 +29,7 @@ function App() {
               <Route path="/Landing" element={<LandingPage />} />
               <Route path="/register" element={<Register />} />
               <Route path="/activities" element={<TrackActivities />} />
+              <Route path="/nutrition" element={<RecipeSearch />} />
               <Route path="/RecipeSearch" element={<RecipeSearch />} />
               <Route path="/HealthGame" element={<HealthGame />} />
               <Route path="/WellnessQuest" element={<WellnessQuest />} />
