@@ -10,9 +10,17 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.0",
     "@gsap/react": "^2.1.2",
+    "@mui/icons-material": "^7.0.1",
+    "@mui/material": "^7.0.1",
     "@reduxjs/toolkit": "^2.6.1",
     "@tailwindcss/vite": "^4.1.2",
+<<<<<<< HEAD
+=======
+    "date-fns": "^4.1.0",
+>>>>>>> 5a97e4e95d06be7b351375ed53bf701e1deb78af
     "framer-motion": "^12.6.3",
     "gsap": "^3.12.7",
     "lucide-react": "^0.487.0",
@@ -21,7 +29,8 @@
     "react-icons": "^5.5.0",
     "react-redux": "^9.2.0",
     "react-router-dom": "^7.4.1",
-    "react-toastify": "^11.0.5"
+    "react-toastify": "^11.0.5",
+    "recharts": "^2.15.2"
   },
   "devDependencies": {
     "@eslint/js": "^9.21.0",
