@@ -6,6 +6,7 @@ import { useState } from 'react'
 import { ThemeProvider } from './context/ThemeContext'
 import Login from './components/auth/login/Login'
 import LandingPage from './components/LandingPage'
+import RecipeSearch from './components/RecipeSearch'
 function App() {
   return (
     <ThemeProvider>
@@ -17,6 +18,7 @@ function App() {
               <Route path="/login" element={<Login />} />
               <Route path="/" element={<Home />} />
               <Route path="/Landing" element={<LandingPage />} />
+              <Route path="/RecipeSearch" element={<RecipeSearch />} />
             </Routes>
           </main>
           <Footer />
