@@ -9,6 +9,8 @@ import LandingPage from './components/LandingPage'
 import Register from './components/auth/register/Register'
 import TrackActivities from './components/TrackActivities'
 import RecipeSearch from './components/RecipeSearch'
+import HealthGame from './components/HealthGame'
+import WellnessQuest from './components/WellnessQuest'
 function App() {
   return (
     <ThemeProvider>
@@ -23,6 +25,9 @@ function App() {
               <Route path="/register" element={<Register />} />
               <Route path="/activities" element={<TrackActivities />} />
               <Route path="/nutrition" element={<RecipeSearch />} />
+              <Route path="/RecipeSearch" element={<RecipeSearch />} />
+              <Route path="/HealthGame" element={<HealthGame />} />
+              <Route path="/WellnessQuest" element={<WellnessQuest />} />
             </Routes>
           </main>
           <Footer />
