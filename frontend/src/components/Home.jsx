@@ -7,6 +7,7 @@ import {
   FiUser,
 } from 'react-icons/fi'
 import { MdOutlineRestaurant, MdOutlineWaterDrop } from 'react-icons/md'
+import { useNavigate } from 'react-router-dom'
 
 const Home = () => {
   const [animated, setAnimated] = useState(false)
@@ -15,7 +16,7 @@ const Home = () => {
     setAnimated(true)
     return () => setAnimated(false)
   }, [])
-
+  const navigate = useNavigate()
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-50 dark:bg-gray-900 transition-colors duration-500">
       <div className="container mx-auto px-4 py-8">
@@ -40,7 +41,10 @@ const Home = () => {
               personalized insights and beautiful visualizations.
             </p>
             <div className="flex space-x-4">
-              <button className="px-6 py-3 rounded-lg font-bold bg-pink-500 hover:bg-pink-600 dark:bg-pink-600 dark:hover:bg-pink-700 text-white transition-colors shadow-lg">
+              <button
+                onClick={() => navigate('/activities')}
+                className="px-6 py-3 rounded-lg font-bold bg-pink-500 hover:bg-pink-600 dark:bg-pink-600 dark:hover:bg-pink-700 text-white transition-colors shadow-lg"
+              >
                 Get Started
               </button>
               <button className="px-6 py-3 rounded-lg font-bold bg-white hover:bg-gray-100 dark:bg-gray-700 dark:hover:bg-gray-600 transition-colors shadow-lg text-gray-800 dark:text-white">
