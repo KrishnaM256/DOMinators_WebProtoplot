@@ -5,6 +5,7 @@ import Footer from './components/Footer'
 import { useState } from 'react'
 import { ThemeProvider } from './context/ThemeContext'
 import Login from './components/auth/login/Login'
+import LandingPage from './components/LandingPage'
 function App() {
   return (
     <ThemeProvider>
@@ -15,6 +16,7 @@ function App() {
             <Routes>
               <Route path="/login" element={<Login />} />
               <Route path="/" element={<Home />} />
+              <Route path="/Landing" element={<LandingPage />} />
             </Routes>
           </main>
           <Footer />
